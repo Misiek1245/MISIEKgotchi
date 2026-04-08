@@ -1,0 +1,25 @@
+*{
+  text-align: center;
+  div#screen{
+    background-color: #ff00ff;
+    margin: 12.5vh 20vw;
+    height: 75vh;
+    width: 60vw;
+    div.layer{
+      width: auto;
+      height: 15vh;
+      div.item{
+        background-color: #0fdd00;
+        display: inline-block;
+        width: 10vw;
+        height: 10vh;
+        margin: 2.5vh 2vw;
+        padding: 0;
+      } 
+      &#main{
+        background-color: #f0f3f0;
+        height: 45vh;
+      }
+    }
+  }
+}

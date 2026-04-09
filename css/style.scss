@@ -1,5 +1,22 @@
-*{
+body{
+  overflow: hidden;
+  background-color: #1fa9ad;
   text-align: center;
+  div#buttons{
+    margin-top: 10vh;
+    display: none;
+    height: 10vh;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    div{
+      border-radius: 100%;
+      background-color: #dddd00;
+      margin:3% 10%;
+      padding: 20px;
+      width: 20px;
+    }
+  }
   div#screen{
     background-color: #ff00ff;
     margin: 12.5vh 20vw;
@@ -7,19 +24,49 @@
     width: 60vw;
     div.layer{
       width: auto;
-      height: 15vh;
+      height: 20%;
       div.item{
         background-color: #0fdd00;
         display: inline-block;
-        width: 10vw;
-        height: 10vh;
-        margin: 2.5vh 2vw;
+        width: 17%;
+        height: 70%;
+        margin: 2% 3%;
         padding: 0;
       } 
       &#main{
         background-color: #f0f3f0;
-        height: 45vh;
+        height: 60%;
       }
     }
   }
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    div#buttons{
+      display: flex;
+    }
+  div#screen{
+    background-color: #ff00ff;
+    margin: 0 ;
+    height: 70vh;
+    width: 100%;
+    div.layer{
+      width: auto;
+      height: 20%;
+      div.item{
+        background-color: #0fdd00;
+        display: inline-block;
+        width: 17%;
+        height: 70%;
+        margin: 2% 3%;
+        padding: 0;
+      } 
+      &#main{
+        background-color: #f0f3f0;
+        height: 60%;
+      }
+    }
+  }
+   } 
 }

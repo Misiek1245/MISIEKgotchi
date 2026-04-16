@@ -18,20 +18,23 @@ body{
     }
   }
   div#screen{
-    background-color: #ff00ff;
+    background-color: #f0f3f0;
     margin: 12.5vh 20vw;
     height: 75vh;
     width: 60vw;
+    z-index: 1;
     div.layer{
       width: auto;
       height: 20%;
       div.item{
-        background-color: #0fdd00;
+        z-index: -1;
+        //background-color: #0fdd00;
         display: inline-block;
         width: 17%;
         height: 70%;
         margin: 2% 3%;
         padding: 0;
+        position: relative;
       } 
       &#main{
         background-color: #f0f3f0;
@@ -47,26 +50,24 @@ body{
       display: flex;
     }
   div#screen{
-    background-color: #ff00ff;
     margin: 0 ;
-    height: 70vh;
+    height: 60vh;
     width: 100%;
     div.layer{
       width: auto;
       height: 20%;
       div.item{
-        background-color: #0fdd00;
-        display: inline-block;
         width: 17%;
         height: 70%;
         margin: 2% 3%;
         padding: 0;
+        img{
+          width: 100%;
+        }
       } 
       &#main{
-        background-color: #f0f3f0;
         height: 60%;
       }
     }
   }
-   } 
-}
+} } 

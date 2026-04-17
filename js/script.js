@@ -1,6 +1,7 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
     const items = [];
+    const blank = document.querySelector('#alert');
     const food = document.querySelector('#food');
     const play = document.querySelector('#play');
     const heal = document.querySelector('#heal');
@@ -8,20 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const stats = document.querySelector('#stats');
     const discipline = document.querySelector('#discipline');
     const lswitch = document.querySelector('#lswitch');
-    items.push(food, lswitch, play, heal, wash, stats, discipline);
-    let itemn = 0;
+    items.push(food, lswitch, play, heal, wash, stats, discipline, blank);
+    let itemn = items.length;
     function cancelA() {
     }
     function startA(x) {
     }
     function hideItems() {
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < items.length; i++) {
             items[i].style.zIndex = "-1";
         }
     }
     function changeItem() {
         hideItems();
-        if (itemn == 7)
+        if (itemn == items.length)
             itemn = 0;
         items[itemn].style.zIndex = "1";
         console.log(items[itemn]);

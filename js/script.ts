@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 const items:HTMLElement[] = []
+const blank = document.querySelector('#alert') as HTMLElement | null
 const food = document.querySelector('#food') as HTMLElement | null
 const play = document.querySelector('#play') as HTMLElement | null
 const heal = document.querySelector('#heal') as HTMLElement | null
@@ -8,9 +9,9 @@ const stats = document.querySelector('#stats') as HTMLElement | null
 const discipline = document.querySelector('#discipline') as HTMLElement | null
 const lswitch = document.querySelector('#lswitch') as HTMLElement | null
 
-items.push(food!, lswitch!, play!, heal!, wash!, stats!, discipline!)
+items.push(food!, lswitch!, play!, heal!, wash!, stats!, discipline!, blank!)
 
-let itemn :number = 0;
+let itemn :number = items.length;
 function cancelA(){
     
 }
@@ -18,13 +19,13 @@ function startA(x :number){
     
 }
 function hideItems() {
-    for(let i=0; i<7; i++){
+    for(let i=0; i< items.length; i++){
         items[i].style.zIndex ="-1"
     }
 }
 function changeItem() {
     hideItems()
-    if (itemn == 7)itemn = 0
+    if (itemn == items.length)itemn = 0
     items[itemn].style.zIndex ="1"
     console.log(items[itemn])
     itemn++       
